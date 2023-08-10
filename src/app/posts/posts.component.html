@@ -1,0 +1,23 @@
+<ul class="post-list">
+    <div class="blog-post">
+        <h2 class="post-title">{{ postTitle }}</h2>
+        <div class="post-content">
+            {{ postContent }}
+        </div>
+    </div>
+    <div class="post-actions">
+        <button (click)="deletePost(postId)" class="delete-button">Delete</button>
+        <button (click)="toggleEdit(postId)" class="edit-button">Edit</button>
+    </div>
+    <div *ngIf="editStates  && selectedPost === postId" class="edit-box">
+        <div class="edit-field">
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" [(ngModel)]="updatedPostTitle" />
+        </div>
+        <div class="edit-field">
+            <label for="postContent">Content:</label>
+            <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
+        </div>
+        <button (click)="editPost(postId)" class="edit-post-button">Edit Post</button>
+    </div>
+</ul>
