@@ -14,8 +14,10 @@ export class PostsComponent {
   postId: number = 0; // Or any default value you want
   postTitle: string = '';
   postContent: string = '';
+  postCategory: string = '';
   updatedPostTitle: string = '';
   updatedPostContent: string = '';
+  updatedPostCategory: string = '';
   editStates: boolean = false;
   selectedPost: number = 0;
 
@@ -32,6 +34,8 @@ export class PostsComponent {
             this.postId = post.id; // Assign the retrieved post directly
             this.postTitle = post.title; // Assign the retrieved post directly
             this.postContent = post.content; // Assign the retrieved post directly
+            this.postCategory = post.category; // Assign the retrieved post directly
+
           } else {
             console.error(`Post with ID ${postId} not found.`);
           }
@@ -61,6 +65,7 @@ export class PostsComponent {
       id: postId, // Replace with the appropriate logic to generate a unique ID
       title: this.updatedPostTitle, // Use the entered title
       content: this.updatedPostContent, // Use the entered content
+      category: this.updatedPostCategory
     };
     this.postService.updatePost(updatedPost).subscribe()
 

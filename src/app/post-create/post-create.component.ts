@@ -17,6 +17,7 @@ export class PostCreateComponent {
 
   newPostTitle: string = ''; // Property to store the new post title
   newPostContent: string = ''; // Property to store the new post content
+  newPostCategory: string = ''; // Property to store the new post content
 
   constructor(private postService: PostService) {
 
@@ -27,6 +28,7 @@ export class PostCreateComponent {
       id: this.getRandomNumber(1, 1000), // Replace with the appropriate logic to generate a unique ID
       title: this.newPostTitle, // Use the entered title
       content: this.newPostContent, // Use the entered content
+      category: this.newPostCategory, // Use the entered content
     };
 
     this.postService.addPost(newPost).subscribe(response => {

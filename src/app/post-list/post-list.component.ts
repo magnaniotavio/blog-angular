@@ -12,6 +12,8 @@ export class PostListComponent implements OnInit {
 
   updatedPostTitle: string = '';
   updatedPostContent: string = '';
+  updatedPostCategory: string = '';
+
   editStates: boolean = false;
   selectedPost: number = 0;
 
@@ -52,6 +54,7 @@ export class PostListComponent implements OnInit {
         id: postId, // Replace with the appropriate logic to generate a unique ID
         title: this.updatedPostTitle, // Use the entered title
         content: this.updatedPostContent, // Use the entered content
+        category: this.updatedPostCategory, // Use the entered content
       };
       this.postService.updatePost(updatedPost).subscribe()
     }

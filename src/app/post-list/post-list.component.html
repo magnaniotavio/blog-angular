@@ -23,6 +23,10 @@
                 <label for="postContent">Content:</label>
                 <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
             </div>
+            <div class="edit-field">
+                <label for="postContent">Category:</label>
+                <textarea id="postContent" [(ngModel)]="updatedPostCategory"></textarea>
+            </div>
             <button (click)="editPost(post.id)" class="edit-post-button">Edit Post</button>
         </div>
     </li>
