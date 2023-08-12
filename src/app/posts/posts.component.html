@@ -6,18 +6,6 @@
         </div>
     </div>
     <div class="post-actions">
-        <button (click)="deletePost(postId)" class="delete-button">Delete</button>
-        <button (click)="toggleEdit(postId)" class="edit-button">Edit</button>
-    </div>
-    <div *ngIf="editStates  && selectedPost === postId" class="edit-box">
-        <div class="edit-field">
-            <label for="postTitle">Title:</label>
-            <input type="text" id="postTitle" [(ngModel)]="updatedPostTitle" />
-        </div>
-        <div class="edit-field">
-            <label for="postContent">Content:</label>
-            <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
-        </div>
-        <button (click)="editPost(postId)" class="edit-post-button">Edit Post</button>
+        <app-post-edit [post]="post"></app-post-edit>
     </div>
 </ul>

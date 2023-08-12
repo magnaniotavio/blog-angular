@@ -1,4 +1,9 @@
 .app-container {
+    width: 80%;
+    margin: auto;
+
+    max-width: 1200px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,12 +23,4 @@
     font-size: 18px;
     color: #007bff;
     text-decoration: none;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
 }

@@ -6,7 +6,6 @@
 .main-content {
     flex-direction: row;
     align-items: flex-start;
-    /* Align items at the top of the container */
 }
 
 .search-container {
@@ -20,6 +19,23 @@
     width: 70%;
 }
 
+.posts-column {
+    float: left;
+    width: 70%;
+    border-left: 10px;
+}
+
+.categories-column {
+    float: right;
+    width: 10%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .search-button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -28,15 +44,6 @@
     cursor: pointer;
 }
 
-li {
-    display: inline-block;
-}
-
-.post-list {
-    list-style: none;
-    padding: 0;
-    width: 70%;
-}
 
 .post-item {
     display: flex;
@@ -51,13 +58,10 @@ li {
 .categories-list {
     list-style: none;
     padding: 0;
-    position: sticky;
-    top: 20px;
     width: 30%;
 }
 
 .categories-list a {
-    display: block;
     margin-bottom: 5px;
     color: #007bff;
     text-decoration: none;

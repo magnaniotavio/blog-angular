@@ -1,1 +1,19 @@
-<p>post-edit works!</p>
+<div class="post-actions">
+    <button (click)="deletePost(post.id)" class="button">Delete</button>
+    <button (click)="toggleEdit(post.id)" class="button">Edit</button>
+</div>
+<div *ngIf="editStates  && selectedPost === post.id" class="post-form-form">
+    <div class="edit-field">
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" [(ngModel)]="updatedPostTitle" />
+    </div>
+    <div class="edit-field">
+        <label for="postContent">Content:</label>
+        <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
+    </div>
+    <div class="edit-field">
+        <label for="postContent">Category:</label>
+        <textarea id="postContent" [(ngModel)]="updatedPostCategory"></textarea>
+    </div>
+    <button (click)="editPost(post.id)" class="button">Edit Post</button>
+</div>
