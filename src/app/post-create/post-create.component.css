@@ -1,0 +1,39 @@
+/* Center the entire content */
+.create-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the spacing */
+.create-post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Style the form elements */
+.create-post-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.create-post-form {
+    width: 100%;
+}
+
+.create-post-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.create-post-form input,
+.create-post-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}

@@ -1,33 +1,41 @@
 <div class="search-container">
     <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" class="search-bar" />
-    <button (click)="searchPosts(searchQuery)" class="search-button">Search</button>
+    <button (click)="searchPosts(searchQuery)" class="button">Search</button>
 </div>
-<ul class="post-list">
-    <li *ngFor="let post of (foundPosts.length > 0 ? foundPosts : posts)" class="post-item">
-        <div class="blog-post">
-            <h2 class="post-title"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
-            <div class="post-content">
-                {{ post.content }}
+<div class="list-container">
+    <div class="posts">
+        <li *ngFor="let post of (foundPosts.length > 0 ? foundPosts : foundCategorizedPosts.length > 0 ? foundCategorizedPosts : posts)"
+            class="post-item">
+            <div class="blog-post">
+                <h2 class="post-title"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
+                <div class="post-content">
+                    {{ post.content }}
+                </div>
             </div>
-        </div>
-        <div class="post-actions">
-            <button (click)="deletePost(post.id)" class="delete-button">Delete</button>
-            <button (click)="toggleEdit(post.id)" class="edit-button">Edit</button>
-        </div>
-        <div *ngIf="editStates  && selectedPost === post.id" class="edit-box">
-            <div class="edit-field">
-                <label for="postTitle">Title:</label>
-                <input type="text" id="postTitle" [(ngModel)]="updatedPostTitle" />
+            <div class="post-actions">
+                <button (click)="deletePost(post.id)" class="button">Delete</button>
+                <button (click)="toggleEdit(post.id)" class="button">Edit</button>
             </div>
-            <div class="edit-field">
-                <label for="postContent">Content:</label>
-                <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
+            <div *ngIf="editStates  && selectedPost === post.id" class="edit-box">
+                <div class="edit-field">
+                    <label for="postTitle">Title:</label>
+                    <input type="text" id="postTitle" [(ngModel)]="updatedPostTitle" />
+                </div>
+                <div class="edit-field">
+                    <label for="postContent">Content:</label>
+                    <textarea id="postContent" [(ngModel)]="updatedPostContent"></textarea>
+                </div>
+                <div class="edit-field">
+                    <label for="postContent">Category:</label>
+                    <textarea id="postContent" [(ngModel)]="updatedPostCategory"></textarea>
+                </div>
+                <button (click)="editPost(post.id)" class="button">Edit Post</button>
             </div>
-            <div class="edit-field">
-                <label for="postContent">Category:</label>
-                <textarea id="postContent" [(ngModel)]="updatedPostCategory"></textarea>
-            </div>
-            <button (click)="editPost(post.id)" class="edit-post-button">Edit Post</button>
-        </div>
-    </li>
-</ul>
+        </li>
+    </div>
+    <div class="categories">
+        <li *ngFor="let category of categories" class="categories-list">
+            <a href="javascript:void(0)" class="search-link" (click)="filterCategory(category)">{{category}}</a>
+        </li>
+    </div>
+</div>

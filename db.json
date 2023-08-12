@@ -1,14 +1,40 @@
 {
   "posts": [
     {
-      "id": 347,
-      "title": "hhh",
-      "content": "eheeel"
+      "id": 934,
+      "title": "Post1",
+      "content": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n\n",
+      "category": "Category1\n"
     },
     {
-      "id": 2,
-      "title": "wddwd",
-      "content": "odkwodwkodow"
+      "id": 763,
+      "title": "Post2",
+      "content": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"",
+      "category": "Cat2"
+    },
+    {
+      "id": 434,
+      "title": "Post3",
+      "content": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n",
+      "category": "Cat3\n"
+    },
+    {
+      "id": 419,
+      "title": "Post4 - updated",
+      "content": "Content4",
+      "category": "Cat3"
+    },
+    {
+      "id": 623,
+      "title": "Post5",
+      "content": "Content5",
+      "category": "Cat3"
+    },
+    {
+      "id": 842,
+      "title": "Post6",
+      "content": "Content6",
+      "category": "Cat2"
     }
   ],
   "comments": [],

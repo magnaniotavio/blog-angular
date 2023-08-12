@@ -12,8 +12,6 @@ import { PostEditComponent } from './post-edit/post-edit.component';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 import { FormsModule } from '@angular/forms';
-import { SearchComponent } from './search/search.component';
-import { SearchResultsComponent } from './search-results/search-results.component'; // Import the FormsModule
 
 @NgModule({
   declarations: [
@@ -23,13 +21,10 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     PostListComponent,
     PostCreateComponent,
     PostEditComponent,
-    SearchComponent,
-    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     FormsModule, // Add FormsModule here
     HttpClientModule, // Here for API
 

@@ -1,0 +1,16 @@
+/* Style the title and navigation */
+.create-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-post-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

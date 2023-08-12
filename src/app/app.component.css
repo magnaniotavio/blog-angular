@@ -1,0 +1,29 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.app-navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.app-navigation a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
