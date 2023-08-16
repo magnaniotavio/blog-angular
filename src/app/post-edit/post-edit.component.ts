@@ -8,9 +8,8 @@ import { Input } from '@angular/core';
   styleUrls: ['./post-edit.component.css']
 })
 export class PostEditComponent {
-  @Input() post: any;
-
   posts: Post[] = [];
+  @Input() post: Post
 
   updatedPostTitle: string = '';
   updatedPostContent: string = '';
@@ -19,10 +18,16 @@ export class PostEditComponent {
   editStates: boolean = false;
   selectedPost: number = 0;
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {
+    this.post = {} as Post; // Initialize the property in the constructor
+
+  }
+
+  allPosts: number = 0;
+  pagination: number = 1;
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe(posts => {
+    this.postService.getPosts(this.pagination).subscribe(posts => {
       this.posts = posts;
     });
   }

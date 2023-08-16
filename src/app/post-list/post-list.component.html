@@ -5,7 +5,7 @@
 <div class="row">
     <div class="posts-column">
         <h3>Posts</h3>
-        <li *ngFor="let post of (foundPosts.length > 0 ? foundPosts : foundCategorizedPosts.length > 0 ? foundCategorizedPosts : posts)"
+        <li *ngFor="let post of postsToShow | paginate : { itemsPerPage: 2, currentPage: pagination, totalItems: allPosts }"
             class="post-item">
             <div class="blog-post">
                 <h2 class="post-title"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
@@ -24,4 +24,7 @@
             <a href="javascript:void(0)" class="search-link" (click)="filterCategory(category)">{{category}}</a>
         </li>
     </div>
+</div>
+<div class="pagination">
+    <pagination-controls (pageChange)="renderPage($event)"></pagination-controls>
 </div>

@@ -10,13 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostsComponent {
 
-  post: Post | undefined;
+  post: Post;
   postId: number = 0;
   postTitle: string = '';
   postContent: string = '';
   postCategory: string = '';
 
-  constructor(private postService: PostService, private route: ActivatedRoute) { }
+  constructor(private postService: PostService, private route: ActivatedRoute) {
+    this.post = {} as Post; // Initialize the property in the constructor
+
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
