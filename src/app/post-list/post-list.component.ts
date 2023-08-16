@@ -53,5 +53,14 @@ export class PostListComponent implements OnInit {
     this.postsToShow = foundCategorizedPosts
   }
 
+  truncateText(text: string, numWords: number): string {
+    const words = text.split(' ');
+    if (words.length <= numWords) {
+      return text;
+    }
+    const truncatedWords = words.slice(0, numWords);
+    return truncatedWords.join(' ') + ' ...';
+  }
+
 }
 

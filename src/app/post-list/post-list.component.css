@@ -9,6 +9,7 @@
 }
 
 .search-container {
+    justify-content: center;
     margin-bottom: 20px;
     margin-right: 20px;
 }
@@ -20,20 +21,24 @@
 }
 
 .pagination {
-    display: flex;
-    justify-content: right;
-    align-items: right;
+    margin-top: 5%;
+    margin-left: 25%;
 }
 
 .posts-column {
     float: left;
     width: 70%;
     border-left: 10px;
+    min-height: 30%
 }
 
 .categories-column {
     float: right;
     width: 10%;
+}
+
+.column-name {
+    text-align: center;
 }
 
 .row:after {
@@ -55,8 +60,24 @@
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
     padding: 20px;
+    min-width: 100%;
+    border: 1px solid #ccc;
+}
+
+.blog-post {
+    min-width: 100%;
+}
+
+.post-title {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.post-actions {
+    align-self: center;
+    margin-top: 2%;
+    bottom: 2%;
 }
 
 .categories-list {

@@ -4,27 +4,27 @@
 </div>
 <div class="row">
     <div class="posts-column">
-        <h3>Posts</h3>
+        <h3 class="column-name">Posts</h3>
         <li *ngFor="let post of postsToShow | paginate : { itemsPerPage: 2, currentPage: pagination, totalItems: allPosts }"
             class="post-item">
             <div class="blog-post">
                 <h2 class="post-title"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></h2>
                 <div class="post-content">
-                    {{ post.content }}
+                    {{ truncateText(post.content, 30)}}
                 </div>
             </div>
             <div class="post-actions">
                 <app-post-edit [post]="post"></app-post-edit>
             </div>
         </li>
+        <div class="pagination">
+            <pagination-controls (pageChange)="renderPage($event)"></pagination-controls>
+        </div>
     </div>
     <div class="categories-column">
-        <h3>Categories</h3>
+        <h3 class="column-name">Categories</h3>
         <li *ngFor="let category of categories" class="categories-list">
             <a href="javascript:void(0)" class="search-link" (click)="filterCategory(category)">{{category}}</a>
         </li>
     </div>
-</div>
-<div class="pagination">
-    <pagination-controls (pageChange)="renderPage($event)"></pagination-controls>
 </div>

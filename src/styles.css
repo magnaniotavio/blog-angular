@@ -1,9 +1,11 @@
 button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: white;
+    color: black;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .post-form-container {

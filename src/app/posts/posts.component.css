@@ -1,0 +1,21 @@
+.blog-post {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    min-width: 100%;
+    border: 1px solid #ccc;
+
+}
+
+.post-title {
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+.post-actions {
+    align-self: center;
+    margin-top: 2%;
+    bottom: 2%;
+}
