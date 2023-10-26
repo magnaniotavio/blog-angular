@@ -32,6 +32,7 @@ export class PostsComponent {
             this.postTitle = post.title;
             this.postContent = post.content;
             this.postCategory = post.category;
+            //
 
           } else {
             console.error(`Post with ID ${postId} not found.`);

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
 import { Input } from '@angular/core';
+
 @Component({
   selector: 'app-post-edit',
   templateUrl: './post-edit.component.html',
@@ -52,6 +53,7 @@ export class PostEditComponent {
       i.id === postId
     ) {
       this.postService.deletePost(postId).subscribe()
+      window.location.reload();
     }
   }
 
@@ -67,6 +69,7 @@ export class PostEditComponent {
         category: this.updatedPostCategory,
       };
       this.postService.updatePost(updatedPost).subscribe()
+      window.location.reload();
     }
   }
 

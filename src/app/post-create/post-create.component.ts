@@ -34,9 +34,8 @@ export class PostCreateComponent {
     this.postService.addPost(newPost).subscribe(response => {
       console.log(response); // This will log the response from the server
     });
+    window.location.reload();
   }
-
-
 
 }
 
